@@ -7,7 +7,6 @@ module.exports = {
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
-    // Can I remove these now?
     "ecmaFeatures": {
       "impliedStrict": true,
       "classes": true
@@ -47,8 +46,8 @@ module.exports = {
       }
     ],
     "arrow-body-style": [
-      2,
-      "as-needed"
+      "error",
+      "always"
     ],
     "no-unused-expressions": [
       2,
@@ -62,7 +61,7 @@ module.exports = {
         "props": false
       }
     ],
-    "no-console": 0,
+    "no-console": 2,
     "import/prefer-default-export": 0,
     "import": 0,
     "func-names": 0,
@@ -78,6 +77,8 @@ module.exports = {
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
+    "react/destructuring-assignment": 0,
+    "react/prop-types": 0,
     "jsx-a11y/accessible-emoji": 0,
     "react/require-default-props": 0,
     "react/jsx-filename-extension": [
@@ -117,7 +118,8 @@ module.exports = {
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
+        "printWidth": 120,
+        "tabWidth": 4
       }
     ],
     "jsx-a11y/href-no-hash": "off",
