@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-onepass",
-  "version": "0.0.19",
-  "description": "ESLint and Prettier Config from Wes Bos",
+  "version": "0.0.1",
+  "description": "ESLint and Prettier Custom Config",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -11,8 +11,6 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:wesbos/eslint-config-wesbos.git",
-  "author": "Wes bos <wes@wesbos.com>",
   "license": "MIT",
   "peerDependencies": {
     "babel-eslint": "^10.0.2",
