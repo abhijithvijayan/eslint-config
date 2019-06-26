@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onepass",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ESLint and Prettier Custom Config",
   "keywords": [
     "javascript",
@@ -8,10 +8,9 @@
     "eslint",
     "lint",
     "config",
-    "prettier"
+    "prettier",
+    "onepass"
   ],
-  "main": "index.js",
-  "license": "MIT",
   "peerDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^5.14.1",
@@ -41,5 +40,9 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix"
-  }
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/abhijithvijayan/eslint-config.git",
+  "author": "abhijithvijayan <34790378+abhijithvijayan@users.noreply.github.com>"
 }
