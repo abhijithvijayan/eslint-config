@@ -103,6 +103,7 @@ module.exports = {
             "error",
             {
                 "printWidth": 120,
+                "semi": true,
                 "singleQuote": true,
                 "tabWidth": 4,
                 "trailingComma": "es5"
@@ -118,7 +119,7 @@ module.exports = {
         ],
         "radix": 0,
         "react-hooks/exhaustive-deps": 0,
-        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/rules-of-hooks": "error",        
         "react/destructuring-assignment": 0,
         "react/display-name": 1,
         "react/forbid-prop-types": 0,
@@ -132,6 +133,7 @@ module.exports = {
             }
         ],
         "react/no-array-index-key": 0,
+        "react/no-multi-comp": 0,
         "react/no-unescaped-entities": 0,
         "react/prefer-stateless-function": 0,
         "react/prop-types": 0,
