@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onepass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint and Prettier Custom Config",
   "keywords": [
     "javascript",
