@@ -79,7 +79,8 @@ module.exports = {
     "react/no-unescaped-entities": 0,
     "react/destructuring-assignment": 0,
     "react/prop-types": 0,
-    "react-hooks/exhaustive-deps": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "0",
     "jsx-a11y/accessible-emoji": 0,
     "react/require-default-props": 0,
     "react/jsx-filename-extension": [
@@ -132,8 +133,7 @@ module.exports = {
         ]
       }
     ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+
   },
   "plugins": [
     "html",
