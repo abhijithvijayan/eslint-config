@@ -118,7 +118,7 @@ module.exports = {
             }
         ],
         "radix": 0,
-        "react-hooks/exhaustive-deps": 0,
+        "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",        
         "react/destructuring-assignment": 0,
         "react/display-name": 1,
