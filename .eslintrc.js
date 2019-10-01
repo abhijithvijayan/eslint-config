@@ -16,7 +16,7 @@ module.exports = {
             "classes": true,
             "impliedStrict": true
         },
-        "ecmaVersion": 2018
+        "ecmaVersion": 2020
     },
     "plugins": [
         "html",
