@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onepass",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "ESLint and Prettier Custom Config",
   "main": "index.js",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
+    "eslint-plugin-react-hooks": "^2.2.0",
     "prettier": "^1.18.2"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
+    "eslint-plugin-react-hooks": "^2.2.0",
     "prettier": "^1.18.2"
   },
   "scripts": {
