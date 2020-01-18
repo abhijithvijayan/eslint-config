@@ -38,8 +38,8 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 
 ```json
 "scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+	"lint": "eslint . --ext .js,.ts",
+	"lint:fix": "eslint . --ext .js,.ts --fix"
 },
 ```
 
@@ -115,14 +115,20 @@ Once you have done one, or both, of the above installs. You probably want your e
 "[javascriptreact]": {
   "editor.formatOnSave": false
 },
+"[typescript]": {
+  "editor.formatOnSave": false
+},
+"[typescriptreact]": {
+  "editor.formatOnSave": false
+},
 "eslint.autoFixOnSave": true,
-"prettier.disableLanguages": ["javascript", "javascriptreact"],
+"prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 ```
 
 ## With Create React App
 
-1. run `npx install-peerdeps --dev eslint-config-onepass`
-1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "onepass"`
+1. Run `npx install-peerdeps --dev eslint-config-onepass`
+1. Open your `package.json` and replace `"extends": "react-app"` with `"extends": "onepass"`
 
 ## 🤬🤬🤬🤬 ITS NOT WORKING
 
