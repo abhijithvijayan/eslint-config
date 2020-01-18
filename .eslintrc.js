@@ -2,7 +2,6 @@ module.exports = {
     "env": {
         "browser": true,
         "jest": true,
-        "jquery": true,
         "node": true
     },
     "extends": [
@@ -134,7 +133,8 @@ module.exports = {
             {
                 "extensions": [
                     ".js",
-                    ".jsx"
+                    ".jsx",
+                    ".tsx"
                 ]
             }
         ],
