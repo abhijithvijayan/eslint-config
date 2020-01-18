@@ -12,11 +12,12 @@ module.exports = {
     ],
     "parser": "babel-eslint",
     "parserOptions": {
+        "ecmaVersion": 2020, // allows parsing of modern ECMAScript features
         "ecmaFeatures": {
             "classes": true,
-            "impliedStrict": true
-        },
-        "ecmaVersion": 2020
+            "impliedStrict": true,
+            "jsx": true // allows parsing of jsx
+        }
     },
     "plugins": [
         "html",
@@ -24,6 +25,7 @@ module.exports = {
         "react-hooks"
     ],
     "rules": {
+        // eslint rules
         "arrow-body-style": [
             "error",
             "always"
@@ -119,7 +121,7 @@ module.exports = {
         ],
         "radix": 0,
         "react-hooks/exhaustive-deps": "warn",
-        "react-hooks/rules-of-hooks": "error",        
+        "react-hooks/rules-of-hooks": "error",
         "react/destructuring-assignment": 0,
         "react/display-name": 1,
         "react/forbid-prop-types": 0,
@@ -140,5 +142,10 @@ module.exports = {
         "react/react-in-jsx-scope": 0,
         "react/require-default-props": 0,
         "space-before-function-paren": 0
+    },
+    "settings": {
+        "react": {
+            "version": 'detect'
+        }
     }
 }
