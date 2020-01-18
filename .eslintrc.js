@@ -6,11 +6,19 @@ module.exports = {
         "node": true
     },
     "extends": [
-        "airbnb",
+        "airbnb", // Uses rules from `eslint-config-airbnb`
+        'plugin:@typescript-eslint/recommended', // Uses rules from `@typescript-eslint/eslint-plugin`
         "prettier",
-        "prettier/react"
+        "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
+        "prettier/react",
     ],
-    "parser": "babel-eslint",
+    "plugins": [
+        "html",
+        "prettier",
+        "react-hooks",
+        '@typescript-eslint',
+    ],
+    "parser": '@typescript-eslint/parser',
     "parserOptions": {
         "ecmaVersion": 2020, // allows parsing of modern ECMAScript features
         "ecmaFeatures": {
@@ -19,11 +27,6 @@ module.exports = {
             "jsx": true // allows parsing of jsx
         }
     },
-    "plugins": [
-        "html",
-        "prettier",
-        "react-hooks"
-    ],
     "rules": {
         // eslint rules
         "arrow-body-style": [
@@ -145,7 +148,7 @@ module.exports = {
     },
     "settings": {
         "react": {
-            "version": 'detect'
+            "version": 'detect', // tells `eslint-plugin-react` to auto detect react version
         }
     }
 }
