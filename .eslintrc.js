@@ -145,7 +145,27 @@ module.exports = {
         "react/prop-types": 0,
         "react/react-in-jsx-scope": 0,
         "react/require-default-props": 0,
-        "space-before-function-paren": 0
+        "space-before-function-paren": 0,
+        '@typescript-eslint/no-use-before-define': 'error',
+        '@typescript-eslint/camelcase': [
+            'error',
+            {
+                allow: [
+                    'utm_campaign',
+                    'utm_content',
+                    'utm_medium',
+                    'utm_source',
+                    'utm_term',
+                    'utm_invalid',
+                    'content_name',
+                    'content_category',
+                    'api_plan',
+                ],
+            },
+        ],
+        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/no-inferrable-types': 'error',
+        '@typescript-eslint/type-annotation-spacing': 'error',
     },
     "settings": {
         "react": {
