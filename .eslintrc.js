@@ -12,12 +12,6 @@ module.exports = {
         "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
         "prettier/react",
     ],
-    "plugins": [
-        "html",
-        "prettier",
-        "react-hooks",
-        '@typescript-eslint',
-    ],
     "parser": '@typescript-eslint/parser',
     "parserOptions": {
         "ecmaVersion": 2020, // allows parsing of modern ECMAScript features
@@ -25,8 +19,15 @@ module.exports = {
             "classes": true,
             "impliedStrict": true,
             "jsx": true // allows parsing of jsx
-        }
+        },
+        "sourceType": 'module' // allows for the use of `imports`
     },
+    "plugins": [
+        "html",
+        "prettier",
+        "react-hooks",
+        '@typescript-eslint',
+    ],
     "rules": {
         // eslint rules
         "arrow-body-style": [
