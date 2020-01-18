@@ -13,10 +13,12 @@
     "lint",
     "config",
     "prettier",
-    "onepass"
+    "onepass",
+    "typescript"
   ],
   "peerDependencies": {
-    "babel-eslint": "10.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -29,7 +31,8 @@
     "prettier": "^1.19.1"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",

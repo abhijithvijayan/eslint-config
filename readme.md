@@ -4,6 +4,8 @@
 
 These are the settings for ESLint and Prettier for [OnePass](https://github.com/onepassapp/onepass) Password Manager
 
+This has TypeScript support as well from `v2.0.0`
+
 ## Installing
 
 You can use eslint **globally** and/or **locally** per project.
