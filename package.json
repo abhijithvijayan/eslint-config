@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onepass",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESLint and Prettier Custom Config",
   "main": "index.js",
   "license": "MIT",
