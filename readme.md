@@ -2,13 +2,14 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-onepass.svg)](https://badge.fury.io/js/eslint-config-onepass)
 
-These are the settings for ESLint and Prettier for [OnePass](https://github.com/onepassapp/onepass) Password Manager
+These are the settings for ESLint and Prettier I use for  my personal projects
 
-This has TypeScript support as well from `v2.0.0`
+- JavaScript only latest version: `1.6.0`
+- TypeScript support: `v2.x.x`
 
 ## Installing
 
-You can use eslint **globally** and/or **locally** per project.
+You can use this config **globally** and/or **locally** per project.
 
 It's usually best to install this locally once per project, that way you can have project specific settings as well as sync those settings with others working on your project via git.
 
@@ -17,31 +18,37 @@ It's usually best to install this locally once per project, that way you can hav
 1. If you don't already have a `package.json` file, create one with `npm init -y`.
 
 2. Then we need to install everything needed by the config:
+   
+    i. For **JavaScript** only version:
+    ```
+    npx install-peerdeps eslint-config-onepass@1.6.0 --dev
+    ```
+    ii. For **TypeScript** version:
 
-```
-npx install-peerdeps --dev eslint-config-onepass
-```
+    ```
+    npx install-peerdeps eslint-config-onepass@latest --dev
+    ```
 
 3. You can see in your `package.json` there are now a big list of devDependencies.
 
 4. Create a `.eslintrc.json` file in the root of your project's directory (it should live where `package.json` does). Your `.eslintrc.json` file should look like this:
 
-```json
-{
-  "extends": ["onepass"]
-}
-```
+    ```json
+    {
+      "extends": ["onepass"]
+    }
+    ```
 
-Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
+      Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
 
 5. You can add two scripts to your package.json to lint and/or fix:
 
-```json
-"scripts": {
-	"lint": "eslint . --ext .js,.ts",
-	"lint:fix": "eslint . --ext .js,.ts --fix"
-},
-```
+    ```json
+    "scripts": {
+      "lint": "eslint . --ext .js,.ts",
+      "lint:fix": "eslint . --ext .js,.ts --fix"
+    },
+    ```
 
 6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
    You probably want your editor to do this though.
@@ -50,9 +57,16 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 
 1. First install everything needed:
 
-```
-npx install-peerdeps --global eslint-config-onepass
-```
+
+    i. For **JavaScript** only version:
+    ```
+    npx install-peerdeps --global eslint-config-onepass@1.6.0
+    ```
+    ii. For **TypeScript** version:
+
+    ```
+    npx install-peerdeps --global eslint-config-onepass@latest
+    ```
 
 2. Then you need to make a global `.eslintrc.json` file:
 
