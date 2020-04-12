@@ -1,6 +1,4 @@
-# eslint-config-onepass
-
-[![npm version](https://badge.fury.io/js/eslint-config-onepass.svg)](https://badge.fury.io/js/eslint-config-onepass)
+# eslint-config-onepass [![npm version](https://img.shields.io/npm/v/eslint-config-onepass)](https://www.npmjs.com/package/eslint-config-onepass)
 
 These are the settings for ESLint and Prettier I use for  my personal projects
 
