@@ -29,7 +29,7 @@ module.exports = {
     ],
     "rules": {
        "arrow-body-style": [
-          "error",
+         "error",
          "as-needed",
          {
             "requireReturnForObjectLiteral":true
@@ -179,6 +179,11 @@ module.exports = {
     "settings": {
        "react": {
           "version": 'detect', // tells `eslint-plugin-react` to auto detect react version
+       },
+       "import/resolver": {
+          "node": {
+             "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
        }
     }
  }
