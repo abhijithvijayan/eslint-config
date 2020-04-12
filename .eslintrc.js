@@ -30,7 +30,10 @@ module.exports = {
     "rules": {
        "arrow-body-style": [
           "error",
-          "always"
+         "as-needed",
+         {
+            "requireReturnForObjectLiteral":true
+         }
        ],
        "comma-dangle": 0,
        "consistent-return": 0,
