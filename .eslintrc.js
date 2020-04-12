@@ -147,7 +147,14 @@ module.exports = {
        "react/prop-types": 0,
        "react/react-in-jsx-scope": 0,
        "react/require-default-props": 0,
-       "space-before-function-paren": 0,
+       "space-before-function-paren": [
+          "error",
+          {
+             "anonymous": "never",
+             "named": "never",
+             "asyncArrow": "always"
+          }
+       ],
        "@typescript-eslint/no-use-before-define": "error",
        "@typescript-eslint/camelcase": [
           "error",
