@@ -41,6 +41,18 @@ module.exports = {
        "import": 0,
        "import/extensions": 0,
        "import/prefer-default-export": 0,
+       "indent": [
+          "error",
+          "tab",
+          {
+             "SwitchCase": 1,
+             "MemberExpression": 1,
+             "ArrayExpression": 1,
+             "ObjectExpression": 1,
+             "ImportDeclaration": 1,
+             "flatTernaryExpressions": false
+          }
+       ],
        "jsx-a11y/accessible-emoji": 0,
        "jsx-a11y/anchor-is-valid": [
           "warn",
@@ -177,13 +189,13 @@ module.exports = {
        "@typescript-eslint/type-annotation-spacing": "error"
     },
     "settings": {
-       "react": {
-          "version": 'detect', // tells `eslint-plugin-react` to auto detect react version
-       },
        "import/resolver": {
           "node": {
              "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
+       },
+       "react": {
+          "version": 'detect', // tells `eslint-plugin-react` to auto detect react version
        }
     }
  }
