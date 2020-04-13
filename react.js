@@ -3,7 +3,8 @@ module.exports = {
     "browser": true
   },
   "extends": [
-    "prettier/react"
+    "prettier/react",
+    "./jsx-a11y.js"
   ],
   "parserOptions": {
     "ecmaFeatures": {

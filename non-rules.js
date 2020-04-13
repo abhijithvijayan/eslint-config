@@ -1,7 +1,8 @@
 module.exports = {
    "env": {
      "jest": true,
-     "node": true
+     "node": true,
+     "browser": true
    },
    "parserOptions": {
      "ecmaVersion": 2018, // allows parsing of modern ECMAScript features

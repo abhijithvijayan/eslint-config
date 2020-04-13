@@ -28,16 +28,6 @@ module.exports = {
             "flatTernaryExpressions": false
          }
       ],
-      "jsx-a11y/accessible-emoji": 0,
-      "jsx-a11y/anchor-is-valid": [
-         "warn",
-         {
-            "aspects": [
-               "invalidHref"
-            ]
-         }
-      ],
-      "jsx-a11y/href-no-hash": "off",
       "max-len": 0,
       "no-alert": 0,
       "no-await-in-loop": 0,
