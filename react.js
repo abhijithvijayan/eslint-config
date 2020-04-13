@@ -14,6 +14,7 @@ module.exports = {
     "react",
     "react-hooks"
   ],
+  // react rules documentation https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   "rules": {
       "react-hooks/exhaustive-deps": "warn",
       "react-hooks/rules-of-hooks": "error",
@@ -41,7 +42,7 @@ module.exports = {
   "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".jsx", ".tsx"]
+          "extensions": [".js", ".jsx", ".jsx", ".tsx", ".json"]
         }
       },
       "react": {

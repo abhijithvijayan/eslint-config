@@ -9,6 +9,7 @@ module.exports = {
    ],
    "parser": "@typescript-eslint/parser",
    "plugins": [
+      "prettier",
       "@typescript-eslint"
    ],
    "rules": {
@@ -36,7 +37,7 @@ module.exports = {
    "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".ts"]
+          "extensions": [".ts", ".js", ".json"]
         }
       }
    }

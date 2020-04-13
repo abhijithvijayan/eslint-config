@@ -11,9 +11,6 @@ module.exports = {
      },
      "sourceType": 'module' // allows for the use of `imports`
    },
-   "plugins": [
-      "prettier"
-   ],
    "settings": {
      "import/resolver": {
       "node": {

@@ -6,5 +6,8 @@ module.exports = {
     "./base.js"
   ],
   "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
   "rules": {},
 }
