@@ -88,11 +88,11 @@ Note that prettier rules overwrite anything in this config (trailing comma, and 
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 120,
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 4,
-        "trailingComma": "es5"
+         "printWidth": 120,
+         "semi": true,
+         "singleQuote": true,
+         "tabWidth": 4,
+         "trailingComma": "es5"
       }
     ]
   }
