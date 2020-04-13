@@ -1,6 +1,5 @@
 module.exports = {
     "env": {
-       "browser": true,
        "jest": true,
        "node": true
     },
@@ -8,8 +7,7 @@ module.exports = {
        "airbnb", // Uses rules from `eslint-config-airbnb`
        'plugin:@typescript-eslint/recommended', // Uses rules from `@typescript-eslint/eslint-plugin`
        "prettier",
-       "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
-       "prettier/react",
+       "prettier/@typescript-eslint" // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -137,28 +135,6 @@ module.exports = {
           }
        ],
        "radix": 0,
-       "react-hooks/exhaustive-deps": "warn",
-       "react-hooks/rules-of-hooks": "error",
-       "react/destructuring-assignment": 0,
-       "react/display-name": 1,
-       "react/forbid-prop-types": 0,
-       "react/jsx-filename-extension": [
-          1,
-          {
-             "extensions": [
-                ".js",
-                ".jsx",
-                ".tsx"
-             ]
-          }
-       ],
-       "react/no-array-index-key": 0,
-       "react/no-multi-comp": 0,
-       "react/no-unescaped-entities": 0,
-       "react/prefer-stateless-function": 0,
-       "react/prop-types": 0,
-       "react/react-in-jsx-scope": 0,
-       "react/require-default-props": 0,
        "space-before-function-paren": [
           "error",
           {
@@ -191,7 +167,7 @@ module.exports = {
     "settings": {
        "import/resolver": {
           "node": {
-             "extensions": [".js", ".jsx", ".ts", ".tsx"]
+             "extensions": [".js", ".json"]
           }
        },
        "react": {
