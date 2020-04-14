@@ -17,11 +17,11 @@ module.exports = {
          "error",
          "tab",
          {
-            "SwitchCase": "warn",
-            "MemberExpression": "warn",
-            "ArrayExpression": "warn",
-            "ObjectExpression": "warn",
-            "ImportDeclaration": "warn",
+            "SwitchCase": 1,
+            "MemberExpression": 1,
+            "ArrayExpression": 1,
+            "ObjectExpression": 1,
+            "ImportDeclaration": 1,
             "flatTernaryExpressions": false
          }
       ],
