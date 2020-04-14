@@ -1,9 +1,9 @@
 {
-	"name": "eslint-config-abhijithvijayan",
-	"version": "0.5.0",
+	"name": "@abhijithvijayan/eslint-config",
+	"version": "0.0.0",
 	"description": "My shared ESLint & Prettier configuration for projects",
 	"license": "MIT",
-	"repository": "https://github.com/abhijithvijayan/eslint-config-abhijithvijayan.git",
+	"repository": "https://github.com/abhijithvijayan/eslint-prettier-config.git",
 	"author": {
 		"name": "abhijithvijayan",
 		"email": "34790378+abhijithvijayan@users.noreply.github.com",
