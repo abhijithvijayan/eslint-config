@@ -7,37 +7,37 @@ module.exports = {
             "requireReturnForObjectLiteral":true
          }
       ],
-      "comma-dangle": 0,
-      "consistent-return": 0,
-      "func-names": 0,
-      "import": 0,
-      "import/extensions": 0,
-      "import/prefer-default-export": 0,
+      "comma-dangle": "off",
+      "consistent-return": "off",
+      "func-names": "off",
+      "import": "off",
+      "import/extensions": "off",
+      "import/prefer-default-export": "off",
       "indent": [
          "error",
          "tab",
          {
-            "SwitchCase": 1,
-            "MemberExpression": 1,
-            "ArrayExpression": 1,
-            "ObjectExpression": 1,
-            "ImportDeclaration": 1,
+            "SwitchCase": "warn",
+            "MemberExpression": "warn",
+            "ArrayExpression": "warn",
+            "ObjectExpression": "warn",
+            "ImportDeclaration": "warn",
             "flatTernaryExpressions": false
          }
       ],
-      "max-len": 0,
-      "no-alert": 0,
-      "no-await-in-loop": 0,
-      "no-console": 2,
-      "no-debugger": 0,
+      "max-len": "off",
+      "no-alert": "off",
+      "no-await-in-loop": "off",
+      "no-console": "error",
+      "no-debugger": "off",
       "no-param-reassign": [
-         2,
+         "error",
          {
             "props": false
          }
       ],
       "no-restricted-syntax": [
-         2,
+         "error",
          "ForInStatement",
          "LabeledStatement",
          "WithStatement"
@@ -47,7 +47,7 @@ module.exports = {
          "except-parens"
       ],
       "no-shadow": [
-         2,
+         "error",
          {
             "allow": [
                "resolve",
@@ -60,15 +60,15 @@ module.exports = {
             "hoist": "all"
          }
       ],
-      "no-underscore-dangle": 0,
+      "no-underscore-dangle": "off",
       "no-unused-expressions": [
-         2,
+         "error",
          {
             "allowTaggedTemplates": true
          }
       ],
       "no-unused-vars": [
-         1,
+         "warn",
          {
             "argsIgnorePattern": "res|next|^err",
             "ignoreSiblings": true
@@ -81,14 +81,14 @@ module.exports = {
          }
       ],
       "quotes": [
-         2,
+         "error",
          "single",
          {
             "allowTemplateLiterals": true,
             "avoidEscape": true
          }
       ],
-      "radix": 0,
+      "radix": "off",
       "space-before-function-paren": [
          "error",
          {

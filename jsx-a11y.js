@@ -3,7 +3,7 @@ module.exports = {
       "jsx-a11y"
     ],
     "rules": {
-      "jsx-a11y/accessible-emoji": 0,
+      "jsx-a11y/accessible-emoji": "off",
       "jsx-a11y/alt-text": "warn",
       "jsx-a11y/anchor-has-content": "error",
       "jsx-a11y/anchor-is-valid": [

@@ -4,7 +4,7 @@ module.exports = {
   },
   "extends": [
     "prettier/react",
-    "./jsx-a11y.js"
+    "./jsx-a"warnwarn"y.js"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,11 +19,11 @@ module.exports = {
   "rules": {
       "react-hooks/exhaustive-deps": "warn",
       "react-hooks/rules-of-hooks": "error",
-      "react/destructuring-assignment": 0,
-      "react/display-name": 1,
-      "react/forbid-prop-types": 0,
+      "react/destructuring-assignment": "off",
+      "react/display-name": "warn",
+      "react/forbid-prop-types": "off",
       "react/jsx-filename-extension": [
-        1,
+        "warn",
         {
             "extensions": [
               ".js",
@@ -32,13 +32,13 @@ module.exports = {
             ]
         }
       ],
-      "react/no-array-index-key": 0,
-      "react/no-multi-comp": 0,
-      "react/no-unescaped-entities": 0,
-      "react/prefer-stateless-function": 0,
-      "react/prop-types": 0,
-      "react/react-in-jsx-scope": 0,
-      "react/require-default-props": 0
+      "react/no-array-index-key": "off",
+      "react/no-multi-comp": "off",
+      "react/no-unescaped-entities": "off",
+      "react/prefer-stateless-function": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/require-default-props": "off"
   },
   "settings": {
       "import/resolver": {
