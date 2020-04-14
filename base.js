@@ -16,18 +16,6 @@ module.exports = {
       "import": "off",
       "import/extensions": "off",
       "import/prefer-default-export": "off",
-      "indent": [
-         "error",
-         "tab",
-         {
-            "SwitchCase": 1,
-            "MemberExpression": 1,
-            "ArrayExpression": 1,
-            "ObjectExpression": 1,
-            "ImportDeclaration": 1,
-            "flatTernaryExpressions": false
-         }
-      ],
       "max-len": "off",
       "no-alert": "off",
       "no-await-in-loop": "off",
