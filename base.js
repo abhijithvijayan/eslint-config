@@ -1,5 +1,6 @@
 module.exports = {
    "extends": [
+      "./import.js",
       "airbnb" // Uses rules from `eslint-config-airbnb`
    ],
    "rules": {
@@ -13,9 +14,6 @@ module.exports = {
       "comma-dangle": "off",
       "consistent-return": "off",
       "func-names": "off",
-      "import": "off",
-      "import/extensions": "off",
-      "import/prefer-default-export": "off",
       "max-len": "off",
       "no-alert": "off",
       "no-await-in-loop": "off",

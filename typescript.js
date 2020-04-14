@@ -3,8 +3,9 @@ module.exports = {
       "./non-rules.js",
       "plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`
       "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
-      "./base.js",
-      "./prettier.js"
+      "./base.js", // Base configuration rules
+      "./prettier.js", // Prettier rules
+      "plugin:import/typescript" // https://www.npmjs.com/package/eslint-plugin-import#typescript
    ],
    "parser": "@typescript-eslint/parser",
    "plugins": [
