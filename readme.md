@@ -1,12 +1,10 @@
-# @abhijithvijayan/eslint-config [![npm version](https://img.shields.io/npm/v/@abhijithvijayan/eslint-config)](https://www.npmjs.com/package/@abhijithvijayan/eslint-config)
+# eslint-config [![npm version](https://img.shields.io/npm/v/@abhijithvijayan/eslint-config)](https://www.npmjs.com/package/@abhijithvijayan/eslint-config)
 
 My shared ESLint & Prettier configuration for projects
 
 ## Installing
 
-You can use this config **globally** and/or **locally** per project.
-
-It's usually best to install this locally once per project, that way you can have project specific settings as well as sync those settings with others working on your project via git.
+You can use this config **globally** and/or **locally** per project(recommended).
 
 ## Local / Per Project Install
 
@@ -14,7 +12,7 @@ It's usually best to install this locally once per project, that way you can hav
 
 2. Then we need to install everything needed by the config:   
     ```
-    npx install-peerdeps @abhijithvijayan/eslint-config@latest --dev
+    npx install-peerdeps @abhijithvijayan/eslint-config --dev
     ```
 
 3. You can see in your `package.json` there are now a big list of devDependencies.
@@ -23,7 +21,7 @@ It's usually best to install this locally once per project, that way you can hav
 
     ```json
     {
-      "extends": ["abhijithvijayan"]
+      "extends": ["@abhijithvijayan/eslint-config"]
     }
     ```
 
@@ -45,16 +43,9 @@ It's usually best to install this locally once per project, that way you can hav
 
 1. First install everything needed:
 
-
-    i. For **JavaScript** only version:
-    ```
-    npx install-peerdeps --global @abhijithvijayan/eslint-config@1.6.0
-    ```
-    ii. For **TypeScript** version:
-
-    ```
-    npx install-peerdeps --global @abhijithvijayan/eslint-config@latest
-    ```
+```
+npx install-peerdeps --global @abhijithvijayan/eslint-config
+```
 
 2. Then you need to make a global `.eslintrc.json` file:
 
@@ -67,7 +58,10 @@ In your `.eslintrc.json` file, it should look like this:
 
 ```json
 {
-  "extends": ["abhijithvijayan"]
+  "extends": [
+    "@abhijithvijayan/eslint-config",
+    "@abhijithvijayan/eslint-config/react"
+  ]
 }
 ```
 
@@ -83,7 +77,7 @@ Note that prettier rules overwrite anything in this config (trailing comma, and 
 
 ```json
 {
-  "extends": ["abhijithvijayan"],
+  "extends": ["@abhijithvijayan/eslint-config"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -130,7 +124,15 @@ Once you have done one, or both, of the above installs. You probably want your e
 ## With Create React App
 
 1. Run `npx install-peerdeps --dev @abhijithvijayan/eslint-config`
-1. Open your `package.json` and replace `"extends": "react-app"` with `"extends": "abhijithvijayan"`
+1. Open your `package.json` and replace `"extends": "react-app"` with `"extends": "@abhijithvijayan/eslint-config"` or create a separate `.eslintrc.json` file(recommended)
+
+## Note
+
+Due to [this bug](https://github.com/eslint/eslint/issues/3458) you
+need to have the associated plugins installed to make things work. I recommend
+keeping them as `devDependencies` to your project if you're going to use the config
+for it.
+
 
 ## Credits
 
