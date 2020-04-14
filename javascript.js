@@ -3,11 +3,9 @@ module.exports = {
     "./non-rules.js",
     "airbnb", // Uses rules from `eslint-config-airbnb`
     "prettier",
-    "./base.js"
+    "./base.js",
+    "./prettier.js"
   ],
   "parser": "babel-eslint",
-  "plugins": [
-    "prettier"
-  ],
   "rules": {},
 }

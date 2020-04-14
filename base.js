@@ -1,7 +1,4 @@
 module.exports = {
-   "extends": [
-      "./prettier.js"
-   ],
    "rules": {
       "arrow-body-style": [
          "error",

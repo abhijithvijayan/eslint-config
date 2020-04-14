@@ -6,10 +6,10 @@ module.exports = {
       "prettier",
       "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
       "./base.js",
+      "./prettier.js"
    ],
    "parser": "@typescript-eslint/parser",
    "plugins": [
-      "prettier",
       "@typescript-eslint"
    ],
    "rules": {
