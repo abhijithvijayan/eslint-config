@@ -1,4 +1,7 @@
 module.exports = {
+   "extends": [
+      "airbnb" // Uses rules from `eslint-config-airbnb`
+   ],
    "rules": {
       "arrow-body-style": [
          "error",
