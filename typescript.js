@@ -11,6 +11,7 @@ module.exports = {
       "@typescript-eslint"
    ],
    "rules": {
+       "no-use-before-define": "off", // note you must disable the base rule
        "@typescript-eslint/no-use-before-define": "error",
        "@typescript-eslint/camelcase": [
           "error",
