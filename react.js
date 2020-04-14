@@ -4,7 +4,7 @@ module.exports = {
   },
   "extends": [
     "prettier/react",
-    "./jsx-a"warnwarn"y.js"
+    "./jsx-a11y.js"
   ],
   "parserOptions": {
     "ecmaFeatures": {
