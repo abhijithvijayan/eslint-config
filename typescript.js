@@ -11,8 +11,9 @@ module.exports = {
       "@typescript-eslint"
    ],
    "rules": {
-       "no-use-before-define": "off", // note you must disable the base rule
+       "no-use-before-define": "off", // ToDo: deprecated https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
        "@typescript-eslint/no-use-before-define": "error",
+       "camelcase": "off",
        "@typescript-eslint/camelcase": [
           "error",
           {

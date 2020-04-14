@@ -11,7 +11,7 @@ module.exports = {
        "jsx": true // allows parsing of jsx
     }
   },
-  "plugins": [
+  "plugins": [ // ToDo: this might override base plugins
     "react",
     "react-hooks"
   ],
@@ -43,7 +43,7 @@ module.exports = {
   "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx", ".jsx", ".tsx", ".json"]
+          "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
         }
       },
       "react": {
