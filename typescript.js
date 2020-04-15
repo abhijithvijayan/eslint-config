@@ -21,14 +21,7 @@ module.exports = {
           "error",
           {
              "allow": [
-                "utm_campaign",
-                "utm_content",
-                "utm_medium",
-                "utm_source",
-                "utm_term",
-                "utm_invalid",
-                "content_name",
-                "content_category",
+                "api_key",
                 "api_plan"
                ]
           }

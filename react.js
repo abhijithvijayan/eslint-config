@@ -48,7 +48,7 @@ module.exports = {
         }
       },
       "react": {
-        "version": 'detect', // tells `eslint-plugin-react` to auto detect react version
+        "version": 'detect' // tells `eslint-plugin-react` to auto detect react version
       }
   }
 }

@@ -1,10 +1,13 @@
 /**
- *  @author abhijithvijayan <abhijithvijayan.in>
+ *  @abhijithvijayan/eslint-config
+ *
+ *  @author   abhijithvijayan <abhijithvijayan.in>
+ *  @license  MIT License
  */
 
 module.exports = {
   "extends": [
     "./javascript.js"
   ],
-  "rules": {},
+  "rules": {}
 }

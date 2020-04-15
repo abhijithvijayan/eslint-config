@@ -4,8 +4,8 @@ module.exports = {
     "prettier",
     "./base.js", // Base configuration rules
     "./prettier.js", // Prettier rules
-    "./import.js", // Base `eslint-plugin-import` rules
+    "./import.js" // Base `eslint-plugin-import` rules
   ],
   "parser": "babel-eslint",
-  "rules": {},
+  "rules": {}
 }
