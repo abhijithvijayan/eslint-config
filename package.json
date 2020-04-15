@@ -14,7 +14,6 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"release": "npm publish --access public",
 		"lint": "eslint . --ext .ts,.js",
 		"lint:fix": "eslint . --ext .ts,.js --fix"
 	},
