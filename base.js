@@ -58,8 +58,9 @@ module.exports = {
       "no-unused-vars": [
          "warn",
          {
-            "argsIgnorePattern": "res|next|^err",
-            "ignoreSiblings": true
+            "argsIgnorePattern": "res|next|^err|^_",
+            "ignoreRestSiblings": true,
+            "caughtErrors": "all"
          }
       ],
       "prefer-const": [

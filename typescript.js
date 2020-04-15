@@ -9,13 +9,14 @@ module.exports = {
       "plugin:import/typescript" // To support TypeScript usage of `eslint-plugin-import`
    ],
    "parser": "@typescript-eslint/parser",
-   "plugins": [ // ToDo: this might override base plugins
+   "plugins": [
       "@typescript-eslint"
    ],
    "rules": {
-       "no-use-before-define": "off", // ToDo: deprecated https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
-       "@typescript-eslint/no-use-before-define": "error",
+       // Disable Base rules for overriding to fix inconsistencies
        "camelcase": "off",
+       "no-unused-vars": "off",
+       "no-use-before-define": "off", // ToDo: deprecated https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
        "@typescript-eslint/camelcase": [
           "error",
           {
@@ -29,11 +30,20 @@ module.exports = {
                 "content_name",
                 "content_category",
                 "api_plan"
-             ]
+               ]
           }
        ],
        "@typescript-eslint/class-name-casing": "error",
        "@typescript-eslint/no-inferrable-types": "error",
+       "@typescript-eslint/no-use-before-define": "error",
+       "@typescript-eslint/no-unused-vars": [
+         "warn",
+         {
+            "argsIgnorePattern": "res|next|^err|^_", // Ignore variables starting with underscore
+            "ignoreRestSiblings": true,
+            "caughtErrors": "all"
+         }
+       ],
        "@typescript-eslint/type-annotation-spacing": "error"
    },
    "settings": {
