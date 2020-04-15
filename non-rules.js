@@ -2,6 +2,7 @@ module.exports = {
    "env": {
      "jest": true,
      "node": true
+     // "commonjs": true
    },
    "parserOptions": {
      "ecmaVersion": 2018, // allows parsing of modern ECMAScript features
@@ -10,12 +11,5 @@ module.exports = {
         "impliedStrict": true
      },
      "sourceType": 'module' // allows for the use of `imports`
-   },
-   "settings": {
-     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".json"]
-      }
-     }
    }
 }

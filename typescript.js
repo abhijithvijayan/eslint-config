@@ -1,14 +1,15 @@
 module.exports = {
    "extends": [
-      "./non-rules.js",
+      "./non-rules.js", // Shared Global settings
       "plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`
       "prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
       "./base.js", // Base configuration rules
       "./prettier.js", // Prettier rules
-      "plugin:import/typescript" // https://www.npmjs.com/package/eslint-plugin-import#typescript
+      "./import.js", // Base `eslint-plugin-import` rules
+      "plugin:import/typescript" // To support TypeScript usage of `eslint-plugin-import`
    ],
    "parser": "@typescript-eslint/parser",
-   "plugins": [
+   "plugins": [ // ToDo: this might override base plugins
       "@typescript-eslint"
    ],
    "rules": {
@@ -36,6 +37,7 @@ module.exports = {
        "@typescript-eslint/type-annotation-spacing": "error"
    },
    "settings": {
+      // Override `eslint-plugin-import` rule
       "import/resolver": {
         "node": {
           "extensions": [".ts", ".js", ".json"]

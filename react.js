@@ -41,6 +41,7 @@ module.exports = {
       "react/require-default-props": "off"
   },
   "settings": {
+      // Override `eslint-plugin-import` rule
       "import/resolver": {
         "node": {
           "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]

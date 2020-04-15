@@ -1,6 +1,5 @@
 module.exports = {
    "extends": [
-      "./import.js",
       "airbnb" // Uses rules from `eslint-config-airbnb`
    ],
    "rules": {
