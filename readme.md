@@ -1,90 +1,168 @@
-# eslint-config [![npm version](https://img.shields.io/npm/v/@abhijithvijayan/eslint-config)](https://www.npmjs.com/package/@abhijithvijayan/eslint-config)
+<h1 align="center">eslint-config</h1>
+<p align="center">My shared ESLint & Prettier configuration for projects</p>
+<div align="center">
+  <a href="https://www.npmjs.com/package/@abhijithvijayan/eslint-config">
+    <img src="https://img.shields.io/npm/v/@abhijithvijayan/eslint-config" alt="NPM" />
+  </a>
+  <!-- <a href="https://travis-ci.org/abhijithvijayan/eslint-config">
+    <img src="https://travis-ci.org/abhijithvijayan/eslint-config.svg?branch=master" alt="Travis Build" />
+  </a> -->
+  </a>
+  <a href="https://david-dm.org/abhijithvijayan/eslint-config">
+    <img src="https://img.shields.io/david/abhijithvijayan/eslint-config.svg?colorB=orange" alt="DEPENDENCIES" />
+  </a>
+  <a href="https://github.com/abhijithvijayan/eslint-config/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/abhijithvijayan/eslint-config.svg" alt="LICENSE" />
+  </a>
+  <a href="https://twitter.com/intent/tweet?text=Check%20out%20eslint-config%21%20by%20%40_abhijithv%0A%0AA%20shared%20ESLint%20%26%20Prettier%20configuration%20with%20TypeScript%20%26%20React%20support.%20https%3A%2F%2Fgithub.com%2Fabhijithvijayan%2Feslint-config%20%0A%0A%23javascript%20%23react%20%23typescript%20%23eslint">
+     <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="TWEET" />
+  </a>
+</div>
+<h3 align="center">🙋‍♂️ Made by <a href="https://twitter.com/_abhijithv">@abhijithvijayan</a></h3>
+<p align="center">
+  Donate:
+  <a href="https://www.paypal.me/iamabhijithvijayan" target='_blank'><i><b>PayPal</b></i></a>,
+  <a href="https://www.patreon.com/abhijithvijayan" target='_blank'><i><b>Patreon</b></i></a>
+</p>
+<p align="center">
+  <a href='https://www.buymeacoffee.com/abhijithvijayan' target='_blank'>
+    <img height='36' style='border:0px;height:36px;' src='https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png' border='0' alt='Buy Me a Coffee' />
+  </a>
+</p>
+<hr />
 
-My shared ESLint & Prettier configuration for projects
+❤️ it? ⭐️ it on [GitHub](https://github.com/abhijithvijayan/eslint-config/stargazers)
 
-## Installing
+## Features
 
-You can use this config **globally** and/or **locally** per project(recommended).
+The config includes these plugins by default:
 
-## Local / Per Project Install
+- [import](https://github.com/benmosher/eslint-plugin-import/issues)
+- [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- [prettier](https://github.com/prettier/eslint-plugin-prettier)
+- [react](https://github.com/yannickcr/eslint-plugin-react/issues)
+- [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
 
-1. If you don't already have a `package.json` file, create one with `npm init -y`.
-
-2. Then we need to install everything needed by the config:   
-    ```
-    npx install-peerdeps @abhijithvijayan/eslint-config --dev
-    ```
-
-3. You can see in your `package.json` there are now a big list of devDependencies.
-
-4. Create a `.eslintrc.json` file in the root of your project's directory (it should live where `package.json` does). Your `.eslintrc.json` file should look like this:
-
-    ```json
-    {
-      "extends": ["@abhijithvijayan/eslint-config"]
-    }
-    ```
-
-      Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
-
-5. You can add two scripts to your package.json to lint and/or fix:
-
-    ```json
-    "scripts": {
-      "lint": "eslint . --ext .js,.ts",
-      "lint:fix": "eslint . --ext .js,.ts --fix"
-    },
-    ```
-
-6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
-   You probably want your editor to do this though.
-
-## Global Install
-
-1. First install everything needed:
+## Installation
 
 ```
-npx install-peerdeps --global @abhijithvijayan/eslint-config
+# npm
+npx install-peerdeps @abhijithvijayan/eslint-config --dev
+
+# yarn
+npx install-peerdeps @abhijithvijayan/eslint-config --dev --yarn
 ```
 
-2. Then you need to make a global `.eslintrc.json` file:
+This will install the required `peerDependencies` for eslint
 
-ESLint will look for one in your home directory
+Note: Due to [this bug](https://github.com/eslint/eslint/issues/3458), you
+need to have all the associated plugins installed as `devDependencies` to make things work.
 
-- `~/.eslintrc.json` for linux / mac
-- `C:\Users\username\.eslintrc.json` for windows
+## Usage
 
-In your `.eslintrc.json` file, it should look like this:
+Add extends of the preferred base config to your `.eslintrc.json`:
 
 ```json
 {
   "extends": [
-    "@abhijithvijayan/eslint-config",
-    "@abhijithvijayan/eslint-config/react"
-  ]
+    "@abhijithvijayan/eslint-config"
+  ],
+  "rules": {
+    // your overrides
+  }
+}
+```
+## Other configs
+
+This config also exposes `react` & `typescript` configs that I use often.
+
+### TypeScript
+
+To use the ts configuration, install the `TypeScript` compiler:
+```
+# npm
+npm install typescript --save-dev
+
+# yarn
+yarn add --dev typescript
+```
+
+`.eslintrc.json:`
+```json
+{
+  "extends": [
+    "@abhijithvijayan/eslint-config/typescript"
+  ],
+  "rules": {
+    // your overrides
+  },
 }
 ```
 
-3. To use from the CLI, you can now run `eslint .` or configure your editor as we show next.
+### React
 
-# Override
+It is to be used in combination with the base config (recommended)
+
+`.eslintrc.json:`
+```json
+{
+  "extends": [
+    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
+    "@abhijithvijayan/eslint-config/react"
+  ],
+  "rules": {
+    // your overrides
+  }
+}
+```
+#### With Create React App
+
+Open your `package.json` and replace `"extends": "react-app"` with above config or remove `extends` entry and create a separate `.eslintrc.json` file(recommended)
+
+### Optional
+
+- To lint your files, you can add the following scripts to your `package.json`:
+
+    ```json
+    "scripts": {
+        // other scripts
+        "lint": "eslint . --ext .js,.ts,.tsx",
+        "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+    },
+    ```
+
+- Add a `.eslintignore` file with my defaults
+    ```
+    node_modules
+    dist            # typescript default output directory
+    .yarn
+    .pnp.js
+
+    # other directories to skip linting
+  ```
+<hr />
+
+## Override
 
 If you'd like to override `eslint` or `prettier` settings, you can add the rules in your `.eslintrc.json` file.
 
 The ESLint rules go directly under `"rules"` while prettier options go under `"prettier/prettier"`.
 
-Note that prettier rules overwrite anything in this config (trailing comma, and single quote), so you'll need to include those as well.
+Note: overriding `prettier` rules(trailing comma, single quote, etc) require including all existing rules as well.
 
 ```json
 {
   "extends": ["@abhijithvijayan/eslint-config"],
   "rules": {
+    "no-console": "off",
+    "react/jsx-props-no-spreading": "off",
     "prettier/prettier": [
       "error",
       {
-         "printWidth": 120,
-         "semi": true,
-         "singleQuote": true,
+         "printWidth": 160,
+         "semi": false,
+         "singleQuote": false,
          "tabWidth": 4,
          "trailingComma": "es5"
       }
@@ -95,45 +173,38 @@ Note that prettier rules overwrite anything in this config (trailing comma, and 
 
 ## With VS Code
 
-You should read this entire thing. Serious!
-
-Once you have done one, or both, of the above installs. You probably want your editor to lint and fix for you. Here are the instructions for VS Code:
+To show lint errors in your editor, you'll need to configure your editor.
 
 1. Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 2. Install the [Prettier package](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 3. Now we need to setup some VS Code settings via `Code/File` → `Preferences` → `Settings`. It's easier to enter these settings while editing the `settings.json` file, so click the `{}` icon in the top right corner:
 
-```js
-"editor.formatOnSave": true,
-"[javascript]": {
-  "editor.formatOnSave": false
-},
-"[javascriptreact]": {
-  "editor.formatOnSave": false
-},
-"[typescript]": {
-  "editor.formatOnSave": false
-},
-"[typescriptreact]": {
-  "editor.formatOnSave": false
-},
-"eslint.autoFixOnSave": true,
-"prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-```
+    ```json
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "[typescript]": {
+      "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "eslint.autoFixOnSave": true,
+    "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    ```
 
-## With Create React App
+## Bugs
 
-1. Run `npx install-peerdeps --dev @abhijithvijayan/eslint-config`
-1. Open your `package.json` and replace `"extends": "react-app"` with `"extends": "@abhijithvijayan/eslint-config"` or create a separate `.eslintrc.json` file(recommended)
-
-## Note
-
-Due to [this bug](https://github.com/eslint/eslint/issues/3458) you
-need to have the associated plugins installed to make things work. I recommend
-keeping them as `devDependencies` to your project if you're going to use the config
-for it.
-
+Please file an issue [here](https://github.com/abhijithvijayan/eslint-config/issues/new) for bugs, missing documentation, or unexpected behavior.
 
 ## Credits
 
-Thanks to [@wesbos](https://github.com/wesbos) for some base rules
+This was initially a fork of [eslint-config-wesbos](https://www.npmjs.com/package/eslint-config-wesbos). Thanks [wesbos](https://twitter.com/wesbos)!
+
+## License
+
+MIT © [Abhijith Vijayan](https://abhijithvijayan.in)
