@@ -1,10 +1,10 @@
 {
   "name": "eslint-config-onepass",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "ESLint and Prettier Custom Config",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/onepassapp/eslint-config-onepass.git",
+  "repository": "https://github.com/abhijithvijayan/eslint-config.git",
   "author": "abhijithvijayan <34790378+abhijithvijayan@users.noreply.github.com>",
   "keywords": [
     "javascript",
@@ -35,6 +35,7 @@
     "@typescript-eslint/parser": "^2.27.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-onepass": "^2.4.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-html": "^6.0.1",
     "eslint-plugin-import": "^2.20.2",

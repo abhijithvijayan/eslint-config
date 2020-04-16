@@ -1,5 +1,14 @@
 # eslint-config-onepass [![npm version](https://img.shields.io/npm/v/eslint-config-onepass)](https://www.npmjs.com/package/eslint-config-onepass)
 
+# DEPRECATED
+
+This package has been renamed to [`@abhijithvijayan/eslint-config`](https://www.npmjs.com/package/@abhijithvijayan/eslint-config)
+
+See Migration guide [here](https://github.com/abhijithvijayan/eslint-config/issues/1)
+
+A few [installs/uninstalls/updates](https://github.com/abhijithvijayan/eslint-config/issues/1#issuecomment-614776465) will make your life easier
+
+<!--
 These are the settings for ESLint and Prettier I use for  my personal projects
 
 - JavaScript only latest version: `1.6.0`
@@ -16,7 +25,7 @@ It's usually best to install this locally once per project, that way you can hav
 1. If you don't already have a `package.json` file, create one with `npm init -y`.
 
 2. Then we need to install everything needed by the config:
-   
+
     i. For **JavaScript** only version:
     ```
     npx install-peerdeps eslint-config-onepass@1.6.0 --dev
@@ -54,7 +63,6 @@ It's usually best to install this locally once per project, that way you can hav
 ## Global Install
 
 1. First install everything needed:
-
 
     i. For **JavaScript** only version:
     ```
@@ -160,4 +168,4 @@ Then, remove your `package-lock.json` file and delete the `node_modules/` direct
   npm remove --global eslint-config-onepass babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
   ```
 
-Then follow the above instructions again from start.
+Then follow the above instructions again from start. -->
