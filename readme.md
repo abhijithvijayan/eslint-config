@@ -73,6 +73,7 @@ Add extends of the preferred base config to your `.eslintrc.json`:
   }
 }
 ```
+
 ## Other configs
 
 This config also exposes `react` & `typescript` configs that I use often.
@@ -80,6 +81,7 @@ This config also exposes `react` & `typescript` configs that I use often.
 ### TypeScript
 
 To use the ts configuration, install the `TypeScript` compiler:
+
 ```
 # npm
 npm install typescript --save-dev
@@ -89,6 +91,7 @@ yarn add --dev typescript
 ```
 
 `.eslintrc.json:`
+
 ```json
 {
   "extends": [
@@ -105,6 +108,7 @@ yarn add --dev typescript
 It is to be used in combination with the base config (recommended)
 
 `.eslintrc.json:`
+
 ```json
 {
   "extends": [
@@ -116,6 +120,7 @@ It is to be used in combination with the base config (recommended)
   }
 }
 ```
+
 #### With Create React App
 
 Open your `package.json` and replace `"extends": "react-app"` with above config or remove `extends` entry and create a separate `.eslintrc.json` file(recommended)
@@ -133,6 +138,7 @@ Open your `package.json` and replace `"extends": "react-app"` with above config 
     ```
 
 - Add a `.eslintignore` file with my defaults
+
     ```
     node_modules
     dist            # typescript default output directory
@@ -141,6 +147,7 @@ Open your `package.json` and replace `"extends": "react-app"` with above config 
 
     # other directories to skip linting
   ```
+
 <hr />
 
 ## Override
@@ -193,7 +200,10 @@ To show lint errors in your editor, you'll need to configure your editor.
     "[typescriptreact]": {
       "editor.formatOnSave": false
     },
-    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": false
+    },
     "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
     ```
 
