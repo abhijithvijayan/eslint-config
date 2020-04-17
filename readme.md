@@ -167,11 +167,15 @@ Note: overriding `prettier` rules(trailing comma, single quote, etc) require inc
     "prettier/prettier": [
       "error",
       {
-         "printWidth": 160,
-         "semi": false,
-         "singleQuote": false,
-         "tabWidth": 4,
-         "trailingComma": "es5"
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "printWidth": 120,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "all",
+        "useTabs": false,
+        "proseWrap": "always"
       }
     ]
   }

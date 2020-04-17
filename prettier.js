@@ -4,15 +4,20 @@ module.exports = {
     // This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   "rules": {
+    // Prettier rules: https://prettier.io/docs/en/options.html
     "prettier/prettier": [
-      "error",
-      {
-         "printWidth": 120,
-         "semi": true,
-         "singleQuote": true,
-         "tabWidth": 4,
-         "trailingComma": "es5"
-      }
-    ]
+			"error",
+			{
+				"bracketSpacing": false,
+				"jsxBracketSameLine": false,
+				"printWidth": 80,
+				"semi": true,
+				"singleQuote": true,
+				"tabWidth": 2,
+				"trailingComma": "es5",
+				"useTabs": false,
+				"proseWrap": "always"
+			}
+		]
   }
 }
