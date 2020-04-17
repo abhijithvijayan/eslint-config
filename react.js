@@ -23,7 +23,7 @@ module.exports = {
 
       // Enforce consistent usage of destructuring assignment of props, state, and context
       // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
-      "react/destructuring-assignment": "always",
+      "react/destructuring-assignment": ["error", "always"],
 
       // Prevent missing displayName in a React component definition
       // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -136,7 +136,7 @@ module.exports = {
         }
       },
       "react": {
-        "version": 'detect' // tells `eslint-plugin-react` to auto detect react version
+        "version": "detect" // tells `eslint-plugin-react` to auto detect react version
       }
   }
 }
