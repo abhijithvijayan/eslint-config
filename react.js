@@ -4,21 +4,19 @@ module.exports = {
   },
   "extends": [
     "prettier/react",
-    "./jsx-a11y.js"
+    "./jsx-a11y.js",
+    "./react-hooks.js"
   ],
   "parserOptions": {
     "ecmaFeatures": {
        "jsx": true // allows parsing of jsx
     }
   },
-  "plugins": [ // ToDo: this might override base plugins
-    "react",
-    "react-hooks"
+  "plugins": [
+    "react"
   ],
   // react rules documentation https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   "rules": {
-      "react-hooks/exhaustive-deps": "warn",
-      "react-hooks/rules-of-hooks": "error",
       "react/destructuring-assignment": "off",
       "react/display-name": "warn",
       "react/forbid-prop-types": "off",
