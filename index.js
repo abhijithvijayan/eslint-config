@@ -6,8 +6,8 @@
  */
 
 module.exports = {
-  "extends": [
-    "./javascript.js"
-  ],
-  "rules": {}
+	"extends": [
+		"./javascript.js"
+	],
+	"rules": {}
 }

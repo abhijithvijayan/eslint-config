@@ -7,7 +7,7 @@ module.exports = {
          "error",
          "as-needed",
          {
-            "requireReturnForObjectLiteral":true
+            "requireReturnForObjectLiteral": true
          }
       ],
       "comma-dangle": "off",
