@@ -11,7 +11,7 @@ module.exports = {
 		"import/extensions": "off",
 		"import/first": "error",
 		"import/no-absolute-path": "error",
-		"import/no-anonymous-default-export": "off",
+		"import/no-anonymous-default-export": "error",
 		"import/no-duplicates": "error",
 		"import/no-internal-modules": "off",
 		"import/no-mutable-exports": "error",
