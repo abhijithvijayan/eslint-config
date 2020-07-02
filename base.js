@@ -1,6 +1,7 @@
 module.exports = {
    "extends": [
-      "airbnb" // Uses rules from `eslint-config-airbnb`
+      "airbnb" // Uses rules from `eslint-config-airbnb`,
+      "./node.js"
    ],
    "rules": {
       // Require braces in arrow function body
