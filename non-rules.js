@@ -1,7 +1,7 @@
 module.exports = {
 	"env": {
 		"jest": true,
-		"node": true
+		// "node": true
 		// "commonjs": true
 	},
 	"parserOptions": {

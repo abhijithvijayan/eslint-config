@@ -45,7 +45,7 @@ The config includes these plugins by default:
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) from [v2.2.3](https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653062266)
 
-# Breaking Changes
+## Breaking Changes
 
 - Uses Eslint v7 from v2.x.x
 - Dropped usage `eslint-config-airbnb` in favour of `@abhijithvijayan/eslint-config-airbnb`
@@ -82,7 +82,29 @@ Add extends of the preferred base config to your `.eslintrc.json`:
 
 ## Other configs
 
-This config also exposes `react` & `typescript` configs that I use often.
+This config also exposes `react`, `node`, and `typescript` configs that I use often.
+
+### Node.js
+
+It is to be used in combination with the base config (recommended)
+
+`.eslintrc.json:`
+
+```json
+{
+  "extends": [
+    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
+    "@abhijithvijayan/eslint-config/node"
+  ],
+  "parserOptions": {
+    // Uncomment if you are using typescript configuration
+    // "project": "./tsconfig.json"
+  },
+  "rules": {
+    // your overrides
+  },
+}
+```
 
 ### TypeScript
 
