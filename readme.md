@@ -37,10 +37,10 @@
 
 The config includes these plugins by default:
 
-- [import](https://github.com/benmosher/eslint-plugin-import/issues)
+- [import](https://github.com/benmosher/eslint-plugin-import)
 - [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 - [prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [react](https://github.com/yannickcr/eslint-plugin-react/issues)
+- [react](https://github.com/yannickcr/eslint-plugin-react)
 - [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) from [v2.x.x](https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653062266)

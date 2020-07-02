@@ -1,9 +1,10 @@
 module.exports = {
 	"extends": [
 		"./non-rules.js", // Shared Global settings
+		"./base.js", // Base configuration rules
+		"@abhijithvijayan/eslint-config-airbnb/typescript", // Use `eslint-config-airbnb-typescript` to override conflicting rules from `eslint-config-airbnb-base`
 		"plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`
 		"prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
-		"./base.js", // Base configuration rules
 		"./prettier.js", // Prettier rules
 		"./import.js", // Base `eslint-plugin-import` rules
 		"plugin:import/typescript" // To support TypeScript usage of `eslint-plugin-import`
