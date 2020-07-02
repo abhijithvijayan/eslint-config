@@ -7,7 +7,6 @@ module.exports = {
 		"plugin:import/warnings"
 	],
 	"rules": {
-		"global-require": "off",
 		"import/extensions": "off",
 		"import/first": "error",
 		"import/no-absolute-path": "error",
