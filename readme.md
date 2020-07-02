@@ -43,6 +43,7 @@ The config includes these plugins by default:
 - [react](https://github.com/yannickcr/eslint-plugin-react/issues)
 - [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
+- [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) from [v2.x.x](https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653062266)
 
 ## Installation
 
