@@ -15,18 +15,6 @@ module.exports = {
 	],
 	"rules": {
 		// Disable Base rules for overriding to fix inconsistencies
-		"camelcase": "off",
-		"no-unused-vars": "off",
-		"no-use-before-define": "off", // ToDo: deprecated https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
-		"@typescript-eslint/camelcase": [
-			"error",
-			{
-				"allow": [
-					"api_key",
-					"api_plan"
-				]
-			}
-		],
 		"@typescript-eslint/class-name-casing": "error",
 		"@typescript-eslint/explicit-function-return-type": "error",
 		"@typescript-eslint/no-explicit-any": "error",
