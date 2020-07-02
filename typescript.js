@@ -14,8 +14,6 @@ module.exports = {
 		"@typescript-eslint"
 	],
 	"rules": {
-		// Disable Base rules for overriding to fix inconsistencies
-		"@typescript-eslint/class-name-casing": "error",
 		"@typescript-eslint/explicit-function-return-type": "error",
 		"@typescript-eslint/no-explicit-any": "error",
 		"@typescript-eslint/no-inferrable-types": "error",
