@@ -3,7 +3,8 @@ module.exports = {
 		"browser": true
 	},
 	"extends": [
-		"prettier/react",
+		"plugin:react/recommended", // extend config which uses `eslint-plugin-react`
+		"prettier/react", // If you extend a config which uses a plugin, it is recommended to add "prettier/that-plugin" (if available).
 		"./shared/jsx-a11y.js",
 		"./shared/react-hooks.js"
 	],
