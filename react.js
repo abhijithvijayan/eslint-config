@@ -4,8 +4,8 @@ module.exports = {
 	},
 	"extends": [
 		"prettier/react",
-		"./jsx-a11y.js",
-		"./react-hooks.js"
+		"./shared/jsx-a11y.js",
+		"./shared/react-hooks.js"
 	],
 	"parserOptions": {
 		"ecmaFeatures": {
