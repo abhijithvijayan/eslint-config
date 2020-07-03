@@ -15,7 +15,8 @@ module.exports = {
 
       // enforce the style of file extensions in import declarations
       // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/file-extension-in-import.md
-      "node/file-extension-in-import": ["error", "always"],
+      // Disabled temporarily due to https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653654869
+      // "node/file-extension-in-import": ["error", "always"],
 
       // enforce either Buffer or require("buffer").Buffer
       // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/buffer.md
