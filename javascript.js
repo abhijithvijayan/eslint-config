@@ -1,7 +1,6 @@
 module.exports = {
 	"extends": [
 		"./shared/non-rules.js", // Shared Global settings
-		"prettier",
 		"./shared/base.js", // Base configuration rules
 		"./shared/prettier.js", // Custom Prettier rules
 		"./shared/import.js" // Base `eslint-plugin-import` rules

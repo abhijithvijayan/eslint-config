@@ -1,6 +1,7 @@
+// This configuration overrides rules from `eslint-config-airbnb-base`
 module.exports = {
    "extends": [
-      "@abhijithvijayan/eslint-config-airbnb" // Uses rules from `eslint-config-airbnb-base`,
+      "@abhijithvijayan/eslint-config-airbnb" // Uses rules from `eslint-config-airbnb-base`
    ],
    "rules": {
       // Require braces in arrow function body

@@ -1,11 +1,15 @@
 module.exports = {
 	"extends": [
 		"./shared/non-rules.js", // Global settings
-		"./shared/base.js", // Base configuration rules
+
+		"./shared/base.js", // Base rules
 		"@abhijithvijayan/eslint-config-airbnb/typescript", // Use `eslint-config-airbnb-typescript` to override conflicting rules from `eslint-config-airbnb-base`
+		// (What about the custom overrides in the base configuration? Add the overriden rules'(in base config) corresponding typescript ones to the bottom)
+
+		"./shared/prettier.js", // Custom Prettier overrides
 		"plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`
 		"prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
-		"./shared/prettier.js", // Prettier rules
+
 		"./shared/import.js", // Base `eslint-plugin-import` rules
 		"plugin:import/typescript" // To support TypeScript usage of `eslint-plugin-import`
 	],
