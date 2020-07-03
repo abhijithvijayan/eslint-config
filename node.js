@@ -5,6 +5,9 @@ module.exports = {
   "extends": [
     "plugin:node/recommended"
   ],
+  "plugins": [
+    "node"
+  ],
   "rules": {
       // enforce either module.exports or exports
       // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md
@@ -41,5 +44,10 @@ module.exports = {
       // enforce require("fs").promises
       // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/fs.md
       "node/prefer-promises/fs": "error"
+  },
+  "settings": {
+    "node": {
+      "tryExtensions": [".js", ".json", ".node", ".ts"]
+    }
   }
 }

@@ -84,28 +84,6 @@ Add extends of the preferred base config to your `.eslintrc.json`:
 
 This config also exposes `react`, `node`, and `typescript` configs that I use often.
 
-### Node.js
-
-It is to be used in combination with the base config (recommended)
-
-`.eslintrc.json:`
-
-```json
-{
-  "extends": [
-    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
-    "@abhijithvijayan/eslint-config/node"
-  ],
-  "parserOptions": {
-    // Uncomment if you are using typescript configuration
-    // "project": "./tsconfig.json"
-  },
-  "rules": {
-    // your overrides
-  },
-}
-```
-
 ### TypeScript
 
 To use the ts configuration, install the `TypeScript` compiler:
@@ -130,6 +108,34 @@ yarn add --dev typescript
   },
   "rules": {
     // your overrides
+  },
+}
+```
+
+### Node.js
+
+It is to be used in combination with the base config (recommended)
+
+`.eslintrc.json:`
+
+```json
+{
+  "extends": [
+    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
+    "@abhijithvijayan/eslint-config/node"
+  ],
+  "parserOptions": {
+    // Uncomment both if you are using typescript with node
+    // "project": "./tsconfig.json",
+    // "sourceType": "module" // https://github.com/mysticatea/eslint-plugin-node#-configs
+  },
+  "rules": {
+    // Uncomment if you are using typescript with node(ES Modules)
+    // "node/no-unsupported-features/es-syntax": ["error", {
+    //   "ignores": ["modules"]
+    // }],
+
+    // your other overrides
   },
 }
 ```

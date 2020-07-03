@@ -1,7 +1,8 @@
 module.exports = {
 	"env": {
-		"jest": true,
-		// "node": true
+		"jest": true
+		// "es6": true,
+		// "node": true,
 		// "commonjs": true
 	},
 	"parserOptions": {
@@ -11,6 +12,6 @@ module.exports = {
 			"classes": true,
 			"impliedStrict": true
 		},
-		"sourceType": 'module' // allows for the use of `imports`
+		"sourceType": "module" // allows for the use of `imports`
 	}
 }
