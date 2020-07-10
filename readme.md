@@ -4,14 +4,14 @@
   <a href="https://www.npmjs.com/package/@abhijithvijayan/eslint-config">
     <img src="https://img.shields.io/npm/v/@abhijithvijayan/eslint-config" alt="NPM" />
   </a>
-  <!-- <a href="https://travis-ci.org/abhijithvijayan/eslint-config">
-    <img src="https://travis-ci.org/abhijithvijayan/eslint-config.svg?branch=master" alt="Travis Build" />
-  </a> -->
+  <a href="https://travis-ci.org/abhijithvijayan/eslint-config">
+    <img src="https://travis-ci.org/abhijithvijayan/eslint-config.svg?branch=main" alt="Travis Build" />
+  </a>
   </a>
   <a href="https://david-dm.org/abhijithvijayan/eslint-config">
     <img src="https://img.shields.io/david/abhijithvijayan/eslint-config.svg?colorB=orange" alt="DEPENDENCIES" />
   </a>
-  <a href="https://github.com/abhijithvijayan/eslint-config/blob/master/LICENSE">
+  <a href="https://github.com/abhijithvijayan/eslint-config/blob/main/license">
     <img src="https://img.shields.io/github/license/abhijithvijayan/eslint-config.svg" alt="LICENSE" />
   </a>
   <a href="https://twitter.com/intent/tweet?text=Check%20out%20eslint-config%21%20by%20%40_abhijithv%0A%0AA%20shared%20ESLint%20%26%20Prettier%20configuration%20with%20TypeScript%20%26%20React%20support.%20https%3A%2F%2Fgithub.com%2Fabhijithvijayan%2Feslint-config%20%0A%0A%23javascript%20%23react%20%23typescript%20%23eslint">
