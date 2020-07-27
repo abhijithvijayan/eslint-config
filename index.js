@@ -1,7 +1,7 @@
 /**
  *  @abhijithvijayan/eslint-config
  *
- *  @author   abhijithvijayan <abhijithvijayan.in>
+ *  @author   abhijithvijayan <https://abhijithvijayan.in>
  *  @license  MIT License
  */
 
