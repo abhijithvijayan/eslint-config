@@ -47,7 +47,8 @@ The config includes these plugins by default:
 
 ## Breaking Changes
 
-- Uses Eslint v7 from v2.x.x
+- Uses `@babel/eslint-parser` instead of `babel-eslint` from `v2.6.0` (See [migration guide](https://git.io/JtPOV))
+- Uses Eslint v7 from v2.x.x (See [migration guide](https://git.io/JtPOo))
 - Dropped usage `eslint-config-airbnb` in favour of `@abhijithvijayan/eslint-config-airbnb`
 
 ## Installation

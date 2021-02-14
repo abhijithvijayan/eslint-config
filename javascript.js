@@ -5,6 +5,6 @@ module.exports = {
 		"./shared/prettier.js", // Custom Prettier rules
 		"./shared/import.js" // Base `eslint-plugin-import` rules
 	],
-	"parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
 	"rules": {}
 }
