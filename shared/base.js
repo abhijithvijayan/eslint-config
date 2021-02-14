@@ -84,7 +84,9 @@ module.exports = {
       "no-unused-expressions": [
          "error",
          {
-            "allowTaggedTemplates": true
+         	 "allowTaggedTemplates": true,
+			 "allowShortCircuit": true,
+			 "allowTernary": true
          }
       ],
       "no-unused-vars": [
