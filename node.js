@@ -47,6 +47,7 @@ module.exports = {
       "node/prefer-promises/fs": "error"
   },
   "settings": {
+	// Override `eslint-plugin-node` rule
     "node": {
       "tryExtensions": [".js", ".json", ".node", ".ts"]
     }
