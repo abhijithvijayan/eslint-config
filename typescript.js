@@ -32,7 +32,9 @@ module.exports = {
 				"caughtErrors": "all"
 			}
 		],
-		"@typescript-eslint/type-annotation-spacing": "error"
+		"@typescript-eslint/type-annotation-spacing": "error",
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"]
 	},
 	"settings": {
 		// Override `eslint-plugin-import` rule
