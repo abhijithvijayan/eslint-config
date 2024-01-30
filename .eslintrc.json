@@ -1,0 +1,9 @@
+{
+	"extends": ["./javascript"],
+	"env": {
+		"browser": true,
+		"node": true,
+		"commonjs": true
+	},
+	"rules": {}
+}
