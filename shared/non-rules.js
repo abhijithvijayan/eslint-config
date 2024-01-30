@@ -7,7 +7,7 @@ module.exports = {
 	},
 	"parserOptions": {
 		// Only ESLint 6.2.0 and later support ES2020.
-		"ecmaVersion": 2020, // allows parsing of modern ECMAScript features
+		"ecmaVersion": "latest", // enables the latest supported ECMAScript version in ESLint’s default parser.
 		"ecmaFeatures": {
 			"classes": true,
 			"impliedStrict": true

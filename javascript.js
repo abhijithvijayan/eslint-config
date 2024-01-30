@@ -7,8 +7,7 @@ module.exports = {
 	],
 	"parser": "@babel/eslint-parser",
 	"parserOptions": {
-		"requireConfigFile": false, // allow @babel/eslint-parser to run on files that do not have a Babel configuration associated with them
-		"ecmaVersion": "latest" // enables the latest supported ECMAScript version in ESLint’s default parser.
+		"requireConfigFile": false // allow @babel/eslint-parser to run on files that do not have a Babel configuration associated with them
 	},
 	"rules": {}
 }
