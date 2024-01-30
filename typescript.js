@@ -6,9 +6,10 @@ module.exports = {
 		"@abhijithvijayan/eslint-config-airbnb/typescript", // Use `eslint-config-airbnb-typescript` to override conflicting rules from `eslint-config-airbnb-base`
 		// (What about the custom overrides in the base configuration? Add the overriden rules'(in base config) corresponding typescript ones to the bottom)
 
-		"./shared/prettier.js", // Custom Prettier overrides
 		"plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`
-		"prettier/@typescript-eslint", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
+		// Custom Prettier overrides. eslint-config-prettier not only turns off core rules, but also some from plugins
+		// https://github.com/prettier/eslint-config-prettier?tab=readme-ov-file#plugins
+		"./shared/prettier.js",
 
 		"./shared/import.js", // Base `eslint-plugin-import` rules
 		"plugin:import/typescript" // To support TypeScript usage of `eslint-plugin-import`
