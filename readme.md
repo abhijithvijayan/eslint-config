@@ -4,13 +4,6 @@
   <a href="https://www.npmjs.com/package/@abhijithvijayan/eslint-config">
     <img src="https://img.shields.io/npm/v/@abhijithvijayan/eslint-config" alt="NPM" />
   </a>
-  <a href="https://travis-ci.org/abhijithvijayan/eslint-config">
-    <img src="https://travis-ci.org/abhijithvijayan/eslint-config.svg?branch=main" alt="Travis Build" />
-  </a>
-  </a>
-  <a href="https://david-dm.org/abhijithvijayan/eslint-config">
-    <img src="https://img.shields.io/david/abhijithvijayan/eslint-config.svg?colorB=orange" alt="DEPENDENCIES" />
-  </a>
   <a href="https://github.com/abhijithvijayan/eslint-config/blob/main/license">
     <img src="https://img.shields.io/github/license/abhijithvijayan/eslint-config.svg" alt="LICENSE" />
   </a>
@@ -31,141 +24,119 @@
 </p>
 <hr />
 
-❤️ it? ⭐️ it on [GitHub](https://github.com/abhijithvijayan/eslint-config/stargazers)
+❤️ it? ⭐️ it on [GitHub](https://github.com/abhijithvijayan/eslint-config/stargazers) or [Tweet](https://twitter.com/intent/tweet?text=Check%20out%20eslint-config%21%20by%20%40_abhijithv%0A%0AA%20shared%20ESLint%20%26%20Prettier%20configuration%20with%20TypeScript%20%26%20React%20support.%20https%3A%2F%2Fgithub.com%2Fabhijithvijayan%2Feslint-config%20%0A%0A%23javascript%20%23react%20%23typescript%20%23eslint) about it.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Other Configs](#other-configs)
+- [Override](#override)
+- [With VS Code](#with-vs-code)
+- [Issues](#issues)
+  - [🐛 Bugs](#-bugs)
+- [License](#license)
 
 ## Features
 
 The config includes these plugins by default:
 
-- [import](https://github.com/benmosher/eslint-plugin-import)
-- [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
-- [prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [react](https://github.com/yannickcr/eslint-plugin-react)
-- [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
-- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
-- [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) from [v2.2.3](https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653062266)
-
-## Breaking Changes
-
-- Uses `@babel/eslint-parser` instead of `babel-eslint` from `v2.6.1` (See [migration guide](https://git.io/JtPOV))
-- Uses Eslint v7 from v2.x.x (See [migration guide](https://git.io/JtPOo))
-- Dropped usage `eslint-config-airbnb` in favour of `@abhijithvijayan/eslint-config-airbnb`
+- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
+- [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
+- [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+- [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)
 
 ## Installation
 
-```
-# npm
-npx install-peerdeps @abhijithvijayan/eslint-config --dev
-
-# yarn
-npx install-peerdeps @abhijithvijayan/eslint-config --dev --yarn
+```sh
+npm install --save-dev @abhijithvijayan/eslint-config
 ```
 
-This will install the required `peerDependencies` for eslint
+Install the required peer dependencies:
 
-Note: Due to [this bug](https://github.com/eslint/eslint/issues/3458), you
-need to have all the associated plugins installed as `devDependencies` to make things work.
+```sh
+npm install --save-dev eslint eslint-config-prettier eslint-plugin-import-x eslint-plugin-prettier globals prettier
+```
+
+For TypeScript support, also install:
+
+```sh
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
+```
+
+For React support, also install:
+
+```sh
+npm install --save-dev eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+```
+
+For Node.js support, also install:
+
+```sh
+npm install --save-dev eslint-plugin-n
+```
 
 ## Usage
 
-Add extends of the preferred base config to your `.eslintrc.json`:
+This package uses ESLint's [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) format. Create an `eslint.config.js` (or `eslint.config.mjs`) file in your project root:
 
-```json
-{
-  "extends": [
-    "@abhijithvijayan/eslint-config"
-  ],
-  "rules": {
-    // your overrides
-  }
-}
+```js
+import baseConfig from '@abhijithvijayan/eslint-config';
+
+export default [
+  ...baseConfig,
+  // your overrides
+];
 ```
 
-## Other configs
+## Other Configs
 
 This config also exposes `react`, `node`, and `typescript` configs that I use often.
 
 ### TypeScript
 
-To use the ts configuration, install the `TypeScript` compiler:
+```js
+import typescriptConfig from '@abhijithvijayan/eslint-config/typescript';
 
-```
-# npm
-npm install typescript --save-dev
-
-# yarn
-yarn add --dev typescript
-```
-
-`.eslintrc.json:`
-
-```json
-{
-  "extends": [
-    "@abhijithvijayan/eslint-config/typescript"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "rules": {
-    // your overrides
-  },
-}
+export default [
+  ...typescriptConfig,
+  // your overrides
+];
 ```
 
 ### Node.js
 
-It is to be used in combination with the base config (recommended)
+It is to be used in combination with the base config (recommended):
 
-`.eslintrc.json:`
+```js
+import baseConfig from '@abhijithvijayan/eslint-config';
+import nodeConfig from '@abhijithvijayan/eslint-config/node';
 
-```json
-{
-  "extends": [
-    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
-    "@abhijithvijayan/eslint-config/node"
-  ],
-  "parserOptions": {
-    // Uncomment both if you are using typescript with node
-    // "project": "./tsconfig.json",
-    // "sourceType": "module" // https://github.com/mysticatea/eslint-plugin-node#-configs
-  },
-  "rules": {
-    // Uncomment if you are using typescript with node(ES Modules)
-    // "node/no-unsupported-features/es-syntax": ["error", {
-    //   "ignores": ["modules"]
-    // }],
-
-    // your other overrides
-  },
-}
+export default [
+  ...baseConfig, // or typescriptConfig
+  ...nodeConfig,
+  // your overrides
+];
 ```
 
 ### React
 
-It is to be used in combination with the base config (recommended)
+It is to be used in combination with the base config (recommended):
 
-`.eslintrc.json:`
+```js
+import baseConfig from '@abhijithvijayan/eslint-config';
+import reactConfig from '@abhijithvijayan/eslint-config/react';
 
-```json
-{
-  "extends": [
-    "@abhijithvijayan/eslint-config", // or "@abhijithvijayan/eslint-config/typescript",
-    "@abhijithvijayan/eslint-config/react"
-  ],
-  "parserOptions": {
-    // Uncomment if you are using typescript configuration
-    // "project": "./tsconfig.json"
-  },
-  "rules": {
-    // your overrides
-  }
-}
+export default [
+  ...baseConfig, // or typescriptConfig
+  ...reactConfig,
+  // your overrides
+];
 ```
-
-#### With Create React App
-
-Open your `package.json` and replace `"extends": "react-app"` with above config or remove `extends` entry and create a separate `.eslintrc.json` file(recommended)
 
 ### Optional
 
@@ -173,55 +144,51 @@ Open your `package.json` and replace `"extends": "react-app"` with above config 
 
     ```json
     "scripts": {
-        // other scripts
-        "lint": "eslint . --ext .js,.ts,.tsx",
-        "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     ```
 
-- Add a `.eslintignore` file with my defaults
+- Add files/directories to ignore in your `eslint.config.js`:
 
+    ```js
+    export default [
+      {
+        ignores: ['node_modules', 'dist', '.yarn', '.pnp.js'],
+      },
+      ...baseConfig,
+    ];
     ```
-    node_modules
-    dist            # typescript default output directory
-    .yarn
-    .pnp.js
-
-    # other directories to skip linting
-  ```
 
 <hr />
 
 ## Override
 
-If you'd like to override `eslint` or `prettier` settings, you can add the rules in your `.eslintrc.json` file.
+If you'd like to override `eslint` or `prettier` settings, you can add the rules in your `eslint.config.js` file:
 
-The ESLint rules go directly under `"rules"` while prettier options go under `"prettier/prettier"`.
+```js
+import baseConfig from '@abhijithvijayan/eslint-config';
 
-Note: overriding `prettier` rules(trailing comma, single quote, etc) require including all existing rules as well.
-
-```json
-{
-  "extends": ["@abhijithvijayan/eslint-config"],
-  "rules": {
-    "no-console": "off",
-    "react/jsx-props-no-spreading": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "bracketSpacing": true,
-        "jsxBracketSameLine": false,
-        "printWidth": 120,
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 4,
-        "trailingComma": "all",
-        "useTabs": false,
-        "proseWrap": "always"
-      }
-    ]
-  }
-}
+export default [
+  ...baseConfig,
+  {
+    rules: {
+      'no-console': 'off',
+      'prettier/prettier': [
+        'error',
+        {
+          bracketSpacing: true,
+          printWidth: 120,
+          semi: true,
+          singleQuote: true,
+          tabWidth: 4,
+          trailingComma: 'all',
+          useTabs: false,
+        },
+      ],
+    },
+  },
+];
 ```
 
 ## With VS Code
@@ -247,19 +214,26 @@ To show lint errors in your editor, you'll need to configure your editor.
       "editor.formatOnSave": false
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.fixAll.eslint": false
+        "source.fixAll": "explicit",
+        "source.fixAll.eslint": "explicit"
     },
     "prettier.disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
     ```
 
-## Bugs
+## Issues
+
+_Looking to contribute? Look for the [Good First Issue](https://github.com/abhijithvijayan/eslint-config/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
+label._
+
+### 🐛 Bugs
 
 Please file an issue [here](https://github.com/abhijithvijayan/eslint-config/issues/new) for bugs, missing documentation, or unexpected behavior.
 
-## Credits
+[**See Bugs**](https://github.com/abhijithvijayan/eslint-config/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+bug%22)
 
-This was initially a fork of [eslint-config-wesbos](https://www.npmjs.com/package/eslint-config-wesbos). Thanks [wesbos](https://twitter.com/wesbos)!
+### TypeScript Config
+
+- Shared TypeScript Configuration - [`@abhijithvijayan/tsconfig`](https://www.npmjs.com/package/@abhijithvijayan/tsconfig)
 
 ## License
 
