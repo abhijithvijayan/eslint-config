@@ -3,7 +3,8 @@
 	"version": "3.0.0",
 	"description": "My shared ESLint & Prettier configuration for projects",
 	"license": "MIT",
-	"repository": "https://github.com/abhijithvijayan/eslint-prettier-config.git",
+	"repository": "https://github.com/abhijithvijayan/eslint-config.git",
+	"funding": "https://github.com/sponsors/abhijithvijayan",
 	"author": {
 		"name": "abhijithvijayan",
 		"email": "email@abhijithvijayan.in",
