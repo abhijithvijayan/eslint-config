@@ -1,6 +1,6 @@
 {
 	"name": "@abhijithvijayan/eslint-config",
-	"version": "2.8.1",
+	"version": "3.0.0",
 	"description": "My shared ESLint & Prettier configuration for projects",
 	"license": "MIT",
 	"repository": "https://github.com/abhijithvijayan/eslint-prettier-config.git",
@@ -9,13 +9,21 @@
 		"email": "email@abhijithvijayan.in",
 		"url": "https://abhijithvijayan.in"
 	},
+	"type": "module",
 	"engines": {
-		"node": ">=10.0.0"
+		"node": ">=18.18.0"
 	},
 	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./javascript": "./javascript.js",
+		"./typescript": "./typescript.js",
+		"./react": "./react.js",
+		"./node": "./node.js"
+	},
 	"scripts": {
-		"lint": "eslint . --ext .ts,.js",
-		"lint:fix": "eslint . --ext .ts,.js --fix"
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"keywords": [
 		"javascript",
@@ -23,42 +31,62 @@
 		"ecmascript",
 		"node",
 		"react",
-		"commonjs",
 		"eslint",
+		"eslint-config",
+		"flat-config",
 		"lint",
 		"config",
 		"prettier",
-		"airbnb",
 		"abhijithvijayan"
 	],
 	"peerDependencies": {
-		"@abhijithvijayan/eslint-config-airbnb": "^1.1.0",
-	  	"@babel/eslint-parser": "^7.12.16",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^8.11.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.25.4",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-node": "^11.0.0",
-		"eslint-plugin-prettier": "^5.1.0",
-		"eslint-plugin-react": "^7.21.4",
-		"eslint-plugin-react-hooks": "^4.1.2",
-		"prettier": "^3.1.1"
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import-x": "^4.0.0",
+		"eslint-plugin-jsx-a11y": "^6.10.0",
+		"eslint-plugin-n": "^17.0.0",
+		"eslint-plugin-prettier": "^5.2.0",
+		"eslint-plugin-react": "^7.35.0",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"globals": "^15.0.0",
+		"prettier": "^3.3.0"
+	},
+	"peerDependenciesMeta": {
+		"@typescript-eslint/eslint-plugin": {
+			"optional": true
+		},
+		"@typescript-eslint/parser": {
+			"optional": true
+		},
+		"eslint-plugin-jsx-a11y": {
+			"optional": true
+		},
+		"eslint-plugin-n": {
+			"optional": true
+		},
+		"eslint-plugin-react": {
+			"optional": true
+		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
-		"@abhijithvijayan/eslint-config-airbnb": "^1.1.0",
-		"@babel/eslint-parser": "^7.12.16",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^8.11.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.25.4",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-node": "^11.0.0",
-		"eslint-plugin-prettier": "^5.1.0",
-		"eslint-plugin-react": "^7.21.4",
-		"eslint-plugin-react-hooks": "^4.1.2",
-		"prettier": "^3.1.1"
+		"@typescript-eslint/eslint-plugin": "^8.19.1",
+		"@typescript-eslint/parser": "^8.19.1",
+		"eslint": "^9.17.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-import-resolver-node": "^0.3.9",
+		"eslint-plugin-import-x": "^4.6.1",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-n": "^17.15.1",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react": "^7.37.3",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"globals": "^15.14.0",
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.2"
 	}
 }

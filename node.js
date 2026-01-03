@@ -1,51 +1,85 @@
-module.exports = {
-  env: {
-    node: true,
-  },
-  extends: ['plugin:node/recommended'],
-  plugins: ['node'],
-  rules: {
-    // enforce either module.exports or exports
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md
-    'node/exports-style': ['error', 'module.exports'],
+/**
+ *  @abhijithvijayan/eslint-config/node
+ *
+ *  Node.js configuration for ESLint v9 flat config
+ *  Uses eslint-plugin-n (successor to eslint-plugin-node)
+ *
+ *  @author   abhijithvijayan <https://abhijithvijayan.in>
+ *  @license  MIT License
+ */
 
-    // enforce the style of file extensions in import declarations
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/file-extension-in-import.md
-    // Disabled temporarily due to https://github.com/abhijithvijayan/eslint-config/issues/3#issuecomment-653654869
-    // "node/file-extension-in-import": ["error", "always"],
+import globals from 'globals';
+import nodePlugin from 'eslint-plugin-n';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
-    // enforce either Buffer or require("buffer").Buffer
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/buffer.md
-    'node/prefer-global/buffer': ['error', 'always'],
+/**
+ * Node.js ESLint flat config
+ * @param {Object} options - Configuration options
+ * @param {string[]} options.files - File patterns to lint (default: JS files)
+ * @returns {Object[]} ESLint flat config array
+ */
+export default function node(options = {}) {
+  const {files = ['**/*.js', '**/*.mjs', '**/*.cjs']} = options;
 
-    // enforce either console or require("console")
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/console.md
-    'node/prefer-global/console': ['error', 'always'],
+  return [
+    {
+      name: '@abhijithvijayan/eslint-config/node',
+      files,
+      languageOptions: {
+        globals: {
+          ...globals.node,
+        },
+      },
+      plugins: {
+        n: nodePlugin,
+      },
+      settings: {
+        n: {
+          tryExtensions: ['.js', '.mjs', '.cjs', '.json', '.node', '.ts'],
+        },
+      },
+      rules: {
+        // Include recommended rules from eslint-plugin-n
+        ...nodePlugin.configs['flat/recommended-script'].rules,
 
-    // enforce either process or require("process")
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/process.md
-    'node/prefer-global/process': ['error', 'always'],
+        // enforce either module.exports or exports
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/exports-style.md
+        'n/exports-style': ['error', 'module.exports'],
 
-    // enforce either URLSearchParams or require("url").URLSearchParams
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/url-search-params.md
-    'node/prefer-global/url-search-params': ['error', 'always'],
+        // enforce either Buffer or require("buffer").Buffer
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/buffer.md
+        'n/prefer-global/buffer': ['error', 'always'],
 
-    // enforce either URL or require("url").URL
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/url.md
-    'node/prefer-global/url': ['error', 'always'],
+        // enforce either console or require("console")
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/console.md
+        'n/prefer-global/console': ['error', 'always'],
 
-    // enforce require("dns").promises
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/dns.md
-    'node/prefer-promises/dns': 'error',
+        // enforce either process or require("process")
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/process.md
+        'n/prefer-global/process': ['error', 'always'],
 
-    // enforce require("fs").promises
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/fs.md
-    'node/prefer-promises/fs': 'error',
-  },
-  settings: {
-    // Override `eslint-plugin-node` rule
-    node: {
-      tryExtensions: ['.js', '.json', '.node', '.ts'],
+        // enforce either URLSearchParams or require("url").URLSearchParams
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/url-search-params.md
+        'n/prefer-global/url-search-params': ['error', 'always'],
+
+        // enforce either URL or require("url").URL
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/url.md
+        'n/prefer-global/url': ['error', 'always'],
+
+        // enforce require("dns").promises
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-promises/dns.md
+        'n/prefer-promises/dns': 'error',
+
+        // enforce require("fs").promises
+        // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-promises/fs.md
+        'n/prefer-promises/fs': 'error',
+
+        // Disable some rules that may conflict with modern ESM usage
+        'n/no-missing-import': 'off',
+        'n/no-unpublished-import': 'off',
+      },
     },
-  },
-};
+    // Prettier config to disable conflicting rules
+    eslintConfigPrettier,
+  ];
+}
